@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS Coding Hub</title>
+
+    <style>
+        /* General page styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #243047;
+            transition: 0.3s;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #152b4a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        nav h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #65d6ff;
+        }
+
+        /* Welcome section */
+        .hero {
+            background: linear-gradient(135deg, #164e91, #2589c9);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .button {
+            background-color: #ffffff;
+            color: #164e91;
+            border: none;
+            padding: 13px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .button:hover {
+            background-color: #dcefff;
+        }
+
+        /* Main content */
+        section {
+            padding: 45px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        /* Learning cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid #2589c9;
+        }
+
+        .card h3 {
+            color: #1769aa;
+        }
+
+        .card p {
+            line-height: 1.7;
+        }
+
+        /* Resources section */
+        .resources {
+            background-color: #e5eef8;
+            text-align: center;
+        }
+
+        .resources a {
+            color: #145da0;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #152b4a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        /* Dark theme */
+        body.dark {
+            background-color: #101827;
+            color: #edf2f7;
+        }
+
+        body.dark .card {
+            background-color: #202d40;
+            color: #edf2f7;
+        }
+
+        body.dark .card h3 {
+            color: #65d6ff;
+        }
+
+        body.dark .resources {
+            background-color: #1a2638;
+        }
+
+        body.dark .resources a {
+            color: #65d6ff;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>CIS Coding Hub</h2>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About CIS</a>
+            <a href="#learn">Learn Coding</a>
+            <a href="#resources">Resources</a>
+        </div>
+    </nav>
+
+    <!-- Welcome section -->
+    <header class="hero" id="home">
+        <h1>Welcome to CIS Coding Hub!</h1>
+
+        <p>
+            Discover computer information systems, learn how websites work,
+            and explore the world of programming.
+        </p>
+
+        <button class="button" onclick="showMessage()">
+            Start Learning
+        </button>
+
+        <br>
+
+        <button class="button" onclick="toggleTheme()">
+            Change Theme
+        </button>
+    </header>
+
+    <!-- About CIS -->
+    <section id="about">
+        <h2>What Is CIS?</h2>
+
+        <p class="intro">
+            Computer Information Systems (CIS) focuses on using technology
+            to organize information, solve problems, manage databases,
+            develop software, and help businesses operate efficiently.
+            CIS combines computers, people, data, and business processes.
+        </p>
+    </section>
+
+    <!-- Coding topics -->
+    <section id="learn">
+        <h2>Explore Coding Technologies</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>HTML</h3>
+                <p>
+                    HTML creates the structure of a website.
+                    It organizes headings, paragraphs, images, links,
+                    buttons, and other webpage content.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <p>
+                    CSS controls the appearance of a website.
+                    It adds colors, fonts, spacing, backgrounds,
+                    layouts, and animations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>
+                    JavaScript makes websites interactive.
+                    It can respond to button clicks, validate forms,
+                    change themes, and update webpage content.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Databases</h3>
+                <p>
+                    Databases store and organize information.
+                    CIS professionals use database technologies
+                    to manage records and retrieve useful data.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Learning resources -->
+    <section class="resources" id="resources">
+        <h2>Helpful Coding Resources</h2>
+
+        <p>
+            Learn HTML and CSS with interactive tutorials.
+        </p>
+
+        <p>
+            <a href="https://www.w3schools.com/html/"
+               target="_blank" rel="noopener noreferrer">
+                HTML Tutorial
+            </a>
+        </p>
+
+        <p>
+            <a href="https://www.w3schools.com/css/"
+               target="_blank" rel="noopener noreferrer">
+                CSS Tutorial
+            </a>
+        </p>
+
+        <p>
+            <a href="https://www.w3schools.com/js/"
+               target="_blank" rel="noopener noreferrer">
+                JavaScript Tutorial
+            </a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 CIS Coding Hub | Learning Technology Through Code</p>
+    </footer>
+
+    <script>
+        // Display a welcome message
+        function showMessage() {
+            alert("Welcome to CIS Coding Hub! Start exploring and learning.");
+        }
+
+        // Switch between light and dark themes
+        function toggleTheme() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+
+</body>
+</html>
